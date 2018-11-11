@@ -18,7 +18,7 @@ cp mapred-site.xml.template mapred-site.xml
 # Configure mapred-site.xml
 sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>mapreduce.framework.name</name>\n\t\t<value>local</value>\n\t</property>%' mapred-site.xml
 # Configure yarn-site.xml
-sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>yarn.nodemanager.aux-services</name>\n\t\t<value>mapreduce_shuffle</value>\n\t</property>\n\t\t<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class\n\t\t<value>org.apache.hadoop.mapred.ShuffleHandler</value>\n\t</property>%' yarn-site.xml
+sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>yarn.nodemanager.aux-services</name>\n\t\t<value>mapreduce_shuffle</value>\n\t</property>\n\t\t<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>\n\t\t<value>org.apache.hadoop.mapred.ShuffleHandler</value>\n\t</property>%' yarn-site.xml
 
 echo '----------'
 echo '----- Logout and log back in to apply changes -----'
