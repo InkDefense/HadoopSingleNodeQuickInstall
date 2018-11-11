@@ -12,7 +12,7 @@ sed -i 's%${JAVA_HOME}%/usr/lib/jvm/java-8-openjdk-amd64/%' hadoop-env.sh
 # Configure core-site.xml
 sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>fs.defaultFS</name>\n\t\t<value>hdfs://localhost/</value>\n\t</property>%' core-site.xml
 # Configure hdfs-site.xml
-sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>dfs.replications</name>\n\t\t<value>1</value>\n\t</property>%' hdfs-site.xml
+sed -i 's%<configuration>%<configuration>\n\t<property>\n\t\t<name>dfs.replication</name>\n\t\t<value>1</value>\n\t</property>%' hdfs-site.xml
 # Create mapred-site.xml from template mapred-site.xml.template
 cp mapred-site.xml.template mapred-site.xml
 # Configure mapred-site.xml
