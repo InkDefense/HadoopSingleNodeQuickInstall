@@ -1,6 +1,8 @@
 # HadoopSingleNodeQuickInstall
 Unix files for installing Hadoop on a Single Node on Ubuntu 18.04 LTS
 
+!!! The free tier eligible micro instance does not have enough memory. You must select an instance with at least 2 GB of memory !!!!
+
 Commands to be run before executing scripts (I'm hoping to convert these and reupload them at some point to save a few steps)
 sudo apt-get update
 sudo apt-get install dos2unix
